@@ -1,12 +1,8 @@
 import React from 'react';
 import './TodoList.css';
+import { ToDoListProps } from '../todo.model';
 
-interface ToDoListProps {
-  items: { id: string; text: string }[];
-  onDeleteTodo: (id: string) => void;
-}
-
-const ToDo = ({ items, onDeleteTodo }: ToDoListProps) => {
+export const ToDo = ({ items, onDeleteTodo }: ToDoListProps) => {
   return (
     <ul>
       {items.map((todo) => (
@@ -18,5 +14,3 @@ const ToDo = ({ items, onDeleteTodo }: ToDoListProps) => {
     </ul>
   );
 };
-
-export default ToDo;

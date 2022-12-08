@@ -5,7 +5,7 @@ type NewTodoProps = {
   onAddTodo: (todoText: string) => void;
 };
 
-const NewTodo = ({ onAddTodo }: NewTodoProps) => {
+export const NewTodo = ({ onAddTodo }: NewTodoProps) => {
   const textInputRef = useRef<HTMLInputElement>(null);
 
   const todoSubmitHandler = (event: React.FormEvent) => {
@@ -23,5 +23,3 @@ const NewTodo = ({ onAddTodo }: NewTodoProps) => {
     </form>
   );
 };
-
-export default NewTodo;

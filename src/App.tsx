@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import ToDo from './components/ToDo';
-import NewTodo from './components/NewTodo';
+
+import { ToDo } from './components/ToDo';
+import { NewTodo } from './components/NewTodo';
 import { Todo } from './todo.model';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     ]);
   };
 
-  // const deleteItem -> ...prevtols => filter(item => id === id) return !id
+  // const deleteItem -> ...prevtols => return filter(todo => todo.id !== todoId)
 
   const deleteHandler = (todoId: string) => {
     setTodos((prevTodos) => {
